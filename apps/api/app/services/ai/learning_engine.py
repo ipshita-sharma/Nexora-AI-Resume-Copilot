@@ -63,8 +63,6 @@ class LearningEngine:
     "6 Months": 24,
 }
 
-      weeks_required = timeline_to_weeks.get(timeline, 4)
-
       if (
     not target_role
     and not resume_context

@@ -8,7 +8,6 @@ from app.services.ai.resume_analyzer import ResumeAnalyzer
 from app.services.ai.resume_parser import parse_resume_file
 from app.services.security.users import ensure_user
 from app.services.storage.provider import StorageProvider
-from fastapi import UploadFile, File
 import shutil
 import os
 import uuid
