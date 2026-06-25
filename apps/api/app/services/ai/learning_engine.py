@@ -55,13 +55,6 @@ class LearningEngine:
     "skills": resume_skills
 }
       
-      timeline_to_weeks = {
-    "2 Weeks": 2,
-    "1 Month": 4,
-    "2 Months": 8,
-    "3 Months": 12,
-    "6 Months": 24,
-}
 
       if (
     not target_role
