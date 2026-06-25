@@ -1,5 +1,5 @@
 type Props = {
-  content: any;
+  content: string | Record<string, unknown>;
 };
 
 export function ResumePreview({
