@@ -58,7 +58,7 @@ const getUserKey = (
 
   const [selectedCompanies, setSelectedCompanies] = useState<string[]>([]);
 
-  const [generatedResume, setGeneratedResume] = useState<any>("");
+  const [generatedResume, setGeneratedResume] = useState("");
   const [exportResumeText, setExportResumeText] = useState("");
 
   const [resumeSummary, setResumeSummary] = useState("");
