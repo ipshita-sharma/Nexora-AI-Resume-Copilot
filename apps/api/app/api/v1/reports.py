@@ -62,11 +62,7 @@ async def export_report(
         pdf = canvas.Canvas(buffer, pagesize=letter)
         pdf.setTitle("Nexora AI Report")
         pdf.setFont("Helvetica-Bold", 18)
-        prepared_for = (
-          getattr(current_user, "email", None)
-          or getattr(current_user, "first_name", None)
-          or current_user.id
-        )
+      
         pdf.drawString(72, 730, "Nexora AI Report")
         pdf.setFont("Helvetica", 11)
         prepared_for = (
@@ -78,7 +74,7 @@ async def export_report(
         pdf.drawString(
          72,
          700,
-         f"Prepared for: Nexora AI User"
+         f"Prepared for: {prepared_for}"
         )
 
         print("PREPARED_FOR =", prepared_for)
