@@ -25,6 +25,8 @@ dependencies = [
   "reportlab>=4.2.0",
   "cloudinary>=1.40.0",
   "boto3>=1.34.0"
+  "groq>=0.31.0",
+  "langchain-groq>=0.2.0",
 ]
 
 [project.optional-dependencies]
