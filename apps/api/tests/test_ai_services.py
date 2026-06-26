@@ -38,12 +38,22 @@ async def test_job_matcher_detects_missing_skills():
     assert isinstance(result["roadmap"], list)
 
 
-def test_learning_engine_builds_weekly_plan():
-    result = LearningEngine().roadmap(
-        "Software Engineer Intern",
-        ["dbms joins", "system design"],
-        ["quantified impact"],
-        ["experience"],
+@pytest.mark.asyncio
+async def test_learning_engine_builds_weekly_plan():
+    result = await LearningEngine().roadmap(
+        target_role="Software Engineer Intern",
+        timeline="1 Month",
+        resume_context="",
+
+        resume_skills=[],
+        missing_skills=["dbms joins", "system design"],
+        jd_missing_skills=["quantified impact"],
+
+        interview_weak_areas=[],
+        resume_weak_sections=["experience"],
+
+        job_match_score=75,
     )
+
     assert result["recommendations"]
     assert result["weekly_plan"]
